@@ -25,62 +25,117 @@ function Header({ onSearch }) {
     }, [currentUser])
     return (
         <>
-            <header className='sticky bg-white p-3 font-sans text-black top-0 z-10 border-b-2 border-pink-200'>
-                <nav className='flex justify-between items-center'>
-                    <ul className='flex items-center space-x-8'>
-                        <li className='flex items-center'>
-                            <img src="..\assets\KGN_logo.png" alt="" className='h-8 w-auto md:h-10 md:w-auto' />
-                        </li>
-                        <li>
-                            <Link to='/' className='cursor-pointer'><div className='cursor-pointer font-semibold text-xl text-purple-800'>KGN Jewellery</div></Link>
-                        </li>
-                    </ul>
+            <header className='sticky top-0 z-50 bg-white font-sans'>
+                {/* Top Banner */}
+                <div className='bg-black text-white text-center py-2 text-sm'>
+                    BIS Hallmarked & Certified Jewellery ✨
+                </div>
 
-                    {/* Navigation Menu */}
-                    <ul className='hidden lg:flex items-center space-x-6 text-sm'>
-                        {/* <li><Link to='/new-arrivals' className='hover:text-gray-600'>New Arrivals</Link></li> */}
-                        <li><Link to='/category/earring' className='hover:text-pink-600 transition-colors'>Earrings</Link></li>
-                        <li><Link to='/category/necklace' className='hover:text-pink-600 transition-colors'>Necklace</Link></li>
-                        <li><Link to='/category/ring' className='hover:text-pink-600 transition-colors'>Rings</Link></li>
-                        {/* <li><Link to='/bangles' className='hover:text-gray-600'>Bangles</Link></li>
-                        <li><Link to='/anklets' className='hover:text-gray-600'>Anklets / Ankle Kada</Link></li>
-                        <li><Link to='/mens-collection' className='hover:text-gray-600'>Men's Collection</Link></li> */}
-                        <li><Link to='/explore' className='hover:text-pink-600 transition-colors'>Explore More Categories</Link></li>
-                    </ul>
+                {/* Main Header */}
+                <div className='border-b border-gray-200 py-4 px-6'>
+                    <nav className='flex justify-between items-center max-w-7xl mx-auto'>
+                        {/* Left - Phone Number */}
+                        <div className='text-gray-700 text-sm flex-1 hidden md:block'>
+                            <span>📞 +91-900-100-1313</span>
+                        </div>
 
-                    {/* Right Side Icons */}
-                    <ul className='flex items-center space-x-6'>
-                        <li><button onClick={() => setShowSearch(!showSearch)} className='hover:text-gray-600'><FaSearch className='h-6 w-6' /></button></li>
-                        {currentUser ? (
-                            <>
-                                <li><button className='hover:text-gray-600'><FaHeart className='h-6 w-6' /></button></li>
-                                <li><Link to='/profile' className='hover:text-gray-600'><FaRegUserCircle className='h-6 w-6' /></Link></li>
-                                <li className='relative'>
-                                    <Link to='/cart' className='hover:text-gray-600'>
-                                        <FaShoppingCart className='h-6 w-6' />
-                                        {cartItems && cartItems.length > 0 && (
-                                            <div className="absolute -top-2 -right-2 bg-red-500 rounded-full w-4 h-4 flex items-center justify-center text-white text-xs">
-                                                {cartItems.length}
-                                            </div>
-                                        )}
-                                    </Link>
-                                </li>
-                            </>
-                        ) : (
-                            <Link to='/signin'>
-                                <button className='px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors'>
-                                    Sign In
-                                </button>
+                        {/* Center - Logo & Brand */}
+                        <div className='flex-1 flex justify-center'>
+                            <Link to='/' className='text-4xl font-light tracking-widest text-gray-900'>
+                                SILVERWALE
                             </Link>
-                        )}
-                    </ul>
-                </nav>
+                        </div>
+
+                        {/* Right - Search & Icons */}
+                        <div className='flex-1 flex justify-end items-center space-x-6'>
+                            {/* Search Bar */}
+                            <div className='hidden md:flex items-center border border-gray-300 rounded px-3 py-2 w-48'>
+                                <input
+                                    type='text'
+                                    placeholder='SEARCH'
+                                    value={query}
+                                    onChange={(e) => setQuery(e.target.value)}
+                                    onKeyPress={(e) => e.key === 'Enter' && handleSearch(e)}
+                                    className='flex-1 outline-none text-sm bg-transparent'
+                                />
+                                <button onClick={handleSearch} className='text-gray-600'>
+                                    <FaSearch className='h-4 w-4' />
+                                </button>
+                            </div>
+
+                            {/* Search Icon Mobile */}
+                            <button
+                                onClick={() => setShowSearch(!showSearch)}
+                                className='md:hidden text-gray-700 hover:text-gray-900'
+                            >
+                                <FaSearch className='h-5 w-5' />
+                            </button>
+
+                            {/* Wishlist */}
+                            {currentUser && (
+                                <button className='text-gray-700 hover:text-gray-900'>
+                                    <FaHeart className='h-5 w-5' />
+                                </button>
+                            )}
+
+                            {/* Account */}
+                            {currentUser ? (
+                                <Link to='/profile' className='text-gray-700 hover:text-gray-900'>
+                                    <FaRegUserCircle className='h-6 w-6' />
+                                </Link>
+                            ) : (
+                                <Link to='/signin' className='text-gray-700 hover:text-gray-900'>
+                                    <FaRegUserCircle className='h-6 w-6' />
+                                </Link>
+                            )}
+
+                            {/* Cart */}
+                            <li className='relative list-none'>
+                                <Link to='/cart' className='text-gray-700 hover:text-gray-900'>
+                                    <FaShoppingCart className='h-5 w-5' />
+                                    {cartItems && cartItems.length > 0 && (
+                                        <div className="absolute -top-2 -right-2 bg-red-500 rounded-full w-5 h-5 flex items-center justify-center text-white text-xs font-bold">
+                                            {cartItems.length}
+                                        </div>
+                                    )}
+                                </Link>
+                            </li>
+                        </div>
+                    </nav>
+                </div>
+
+                {/* Navigation Menu */}
+                <div className='border-b border-gray-200 hidden md:block'>
+                    <nav className='flex justify-center items-center space-x-12 max-w-7xl mx-auto px-6 py-4'>
+                        <Link to='/category/ring' className='text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors tracking-wide'>
+                            RINGS
+                        </Link>
+                        <Link to='/category/earring' className='text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors tracking-wide'>
+                            EARRINGS
+                        </Link>
+                        <Link to='/category/necklace' className='text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors tracking-wide'>
+                            NECKLACES
+                        </Link>
+                        <Link to='/explore' className='text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors tracking-wide'>
+                            BANGLES & BRACELETS
+                        </Link>
+                        <Link to='/explore' className='text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors tracking-wide'>
+                            ENGAGEMENT & WEDDING
+                        </Link>
+                        <Link to='/explore' className='text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors tracking-wide'>
+                            COLLECTIONS
+                        </Link>
+                        <Link to='/explore' className='text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors tracking-wide'>
+                            GIFTS
+                        </Link>
+                    </nav>
+                </div>
             </header>
 
-            {/* Search Modal */}
+            {/* Mobile Search Modal */}
             {showSearch && (
-                <div className='fixed inset-0 bg-black bg-opacity-50 z-50 flex items-start justify-center pt-20'>
-                    <div className='bg-white rounded-lg w-full max-w-2xl mx-4 p-4'>
+                <div className='fixed inset-0 bg-black bg-opacity-50 z-40 flex items-start justify-center pt-20 md:hidden'>
+                    <div className='bg-white rounded-lg w-full max-w-md mx-4 p-4'>
                         <div className='flex items-center justify-between mb-4'>
                             <h3 className='text-lg font-semibold'>Search</h3>
                             <button
@@ -97,7 +152,7 @@ function Header({ onSearch }) {
                                 <input
                                     className='flex-1 px-4 py-2 outline-none text-black'
                                     type="text"
-                                    placeholder="Search for products..."
+                                    placeholder="Search..."
                                     value={query}
                                     onChange={(e) => setQuery(e.target.value)}
                                     autoFocus

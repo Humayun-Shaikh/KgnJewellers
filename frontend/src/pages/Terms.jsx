@@ -5,12 +5,12 @@ import { Link } from 'react-router-dom';
 const Terms = () => {
   return (
     <>
-    <div className='flex py-5'><Link to='/'><FaHome className='h-6 w-6 m-5'/></Link><h1 className='text-4xl font-bold mx-auto my-auto'>KGN Jewellery</h1></div><hr/>
+    <div className='flex py-5'><Link to='/'><FaHome className='h-6 w-6 m-5'/></Link><h1 className='text-4xl font-bold mx-auto my-auto'>Silverwale</h1></div><hr/>
     <div className="container mx-auto py-5 px-4">
       <h1 className="text-4xl font-bold mb-8 text-center">Terms and conditions</h1>
       <div className="max-w-3xl mx-auto">
         <p className="text-lg mb-4">
-          By accessing and using KGN Jewellery (the "Service"), you agree to be bound by these Terms and Conditions. Please read them carefully before using the Service.
+          By accessing and using Silverwale (the "Service"), you agree to be bound by these Terms and Conditions. Please read them carefully before using the Service.
         </p>
         <h2 className="text-2xl font-semibold mb-4">1. Use of the Service</h2>
         <p className="text-lg mb-4">
@@ -22,18 +22,18 @@ const Terms = () => {
         </p>
         <h2 className="text-2xl font-semibold mb-4">3. Intellectual Property</h2>
         <p className="text-lg mb-4">
-          The Service and its original content, features, and functionality are owned by KGN Jewellery and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
+          The Service and its original content, features, and functionality are owned by Silverwale and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.
         </p>
         <h2 className="text-2xl font-semibold mb-4">4. Limitation of Liability</h2>
         <p className="text-lg mb-4">
-          To the fullest extent permitted by law, KGN Jewellery shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your access to or use of or inability to access or use the Service; (b) any conduct or content of any third party on the Service; (c) any content obtained from the Service; or (d) unauthorized access, use, or alteration of your transmissions or content.
+          To the fullest extent permitted by law, Silverwale shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from (a) your access to or use of or inability to access or use the Service; (b) any conduct or content of any third party on the Service; (c) any content obtained from the Service; or (d) unauthorized access, use, or alteration of your transmissions or content.
         </p>
         <h2 className="text-2xl font-semibold mb-4">5. Governing Law</h2>
         <p className="text-lg mb-4">
           These Terms and Conditions shall be governed by and construed in accordance with the laws of [Your Country], without regard to its conflict of law provisions.
         </p>
         <p className="text-lg">
-          If you have any questions or concerns about these Terms and Conditions, please contact us at legal@kgnjewellery.com.
+          If you have any questions or concerns about these Terms and Conditions, please contact us at legal@silverwale.com.
         </p>
       </div>
     </div>

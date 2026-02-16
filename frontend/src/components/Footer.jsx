@@ -8,14 +8,14 @@ function Footer() {
             <footer className='bg-gradient-to-r from-purple-900 to-pink-900 text-gray-300 py-4'>
                 <div className='md:grid md:grid-cols-4 place-items-center md:gap-[10vh] py-10 gap-[5vh] grid grid-cols-2'>
                     <div className='ml-[2vw]'>
-                        <h1 className='font-bold cursor-pointer'>KGN Jewellery</h1> <br />
+                        <h1 className='font-bold cursor-pointer'>Silverwale</h1> <br />
                         <p className='cursor-default'>Your ultimate destination for jewellery, accessories, and timeless pieces. Get ready to elevate your style!</p>
                     </div>
                     <div>
                         <h1 className='font-bold cursor-default'>Company</h1> <br />
                         <p>Ahmedabad, India</p>
                         <FaPhone className='md:h-5 md:w-5' /><p>+91 9999999999</p>
-                        <FaEnvelope className='md:h-5 md:w-5' /><p>kgnjewellery@gmail.com</p>
+                        <FaEnvelope className='md:h-5 md:w-5' /><p>silverwale@gmail.com</p>
                     </div>
                     <div>
                         <h1 className='font-bold cursor-default'>QuickLinks</h1><br />

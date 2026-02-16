@@ -3,7 +3,7 @@ import icon1 from '../../assets/Icon1_assurance.svg';
 import icon2 from '../../assets/Icon2_assurance.svg';
 import icon3 from '../../assets/Icon3_assurance.svg';
 
-const KGNAssurance = () => {
+const SilverwaleAssurance = () => {
     const assurances = [
         {
             icon: icon1,
@@ -26,7 +26,7 @@ const KGNAssurance = () => {
         <section className='w-full py-16 px-4 bg-gradient-to-br from-purple-50 to-pink-50'>
             <div className='max-w-7xl mx-auto'>
                 <div className='text-center mb-12'>
-                    <h2 className='text-4xl font-bold text-purple-800 mb-4'>KGN Assurance</h2>
+                    <h2 className='text-4xl font-bold text-purple-800 mb-4'>Silverwale Assurance</h2>
                     <p className='text-lg text-gray-700'>Your trust is our most precious asset</p>
                 </div>
 
@@ -56,4 +56,4 @@ const KGNAssurance = () => {
     );
 };
 
-export default KGNAssurance;
+export default SilverwaleAssurance;

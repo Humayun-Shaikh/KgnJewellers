@@ -5,17 +5,17 @@ import { Link } from 'react-router-dom';
 const About = () => {
   return (
     <>
-      <div className='flex py-5'><Link to='/'><FaHome className='h-6 w-6 m-5' /></Link><h1 className='text-4xl font-bold mx-auto my-auto'>KGN Jewellery</h1></div><hr />
+      <div className='flex py-5'><Link to='/'><FaHome className='h-6 w-6 m-5' /></Link><h1 className='text-4xl font-bold mx-auto my-auto'>Silverwale</h1></div><hr />
       <div className="container mx-auto py-12 px-4">
         <h1 className="text-4xl font-bold mb-8 text-center">About us</h1>
         <div className="text-lg max-w-2xl mx-auto">
           <p className="mb-4">
-            KGN Jewellery is dedicated to providing high-quality jewellery to customers of all levels.
+            Silverwale is dedicated to providing high-quality jewellery to customers of all levels.
             Our mission is to inspire and empower individuals to achieve their style goals
             by offering top-notch pieces at affordable prices.
           </p>
           <p className="mb-4">
-            At KGN Jewellery, we believe in the power of beautiful jewellery to bring people together,
+            At Silverwale, we believe in the power of beautiful jewellery to bring people together,
             foster confidence, and promote a stylish lifestyle. Whether you're looking for something elegant
             or just starting your collection, we have everything you need to shine.
           </p>
@@ -25,7 +25,7 @@ const About = () => {
             trusted manufacturers to ensure durability, beauty, and style.
           </p>
           <p>
-            Thank you for choosing KGN Jewellery as your partner in achieving your style dreams.
+            Thank you for choosing Silverwale as your partner in achieving your style dreams.
             We look forward to serving you and being a part of your fashion adventures.
           </p>
         </div>

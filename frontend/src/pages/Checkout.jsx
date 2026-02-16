@@ -130,7 +130,7 @@ function Checkout() {
                     key,
                     amount: order.amount,
                     currency: "INR",
-                    name: "KGN Jewellery",
+                    name: "Silverwale",
                     description: "Ecommerce for jewellery",
                     image: "https://example.com/your_logo",
                     order_id: order.id,

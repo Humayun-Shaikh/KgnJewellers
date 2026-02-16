@@ -61,7 +61,7 @@ function SignIn() {
         <>
             <div className='flex justify-center items-center w-screen h-[15vh]'>
                 <Link to="/"><p className="absolute left-4"><FaHome className='h-5 w-5' />Back</p></Link>
-                <Link to="/"><h1 className='font-bold text-3xl'>KGN Jewellery</h1></Link>
+                <Link to="/"><h1 className='font-bold text-3xl'>Silverwale</h1></Link>
             </div>
             <div className='flex items-center justify-center h-full'>
                 <div className='h-screen w-[50%] hidden md:block'>
